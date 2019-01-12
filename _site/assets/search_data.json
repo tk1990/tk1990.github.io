@@ -60,13 +60,6 @@
 
   
     {
-      "title"    : "一份简明的 Markdown 笔记与教程",
-      "category" : "Markdown",
-      
-      "url"      : "http://blog.tongkun.tech/2018/09/06/markdown-intro/"
-    } ,
-  
-    {
       "title"    : "Mac Docker入门安装使用",
       "category" : "Docker",
       
