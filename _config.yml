@@ -98,14 +98,14 @@ gitment:
     owner: tk1990
     repo: blog-comments
     oauth:
-        client_id: 25ab1fed7b984d7c4bcb
-        client_secret: 676bcc155937e0ab9949cc6a11d37db1b13771c0
+        client_id: e03260401c274f4211c3
+        client_secret: 97d5e9414c12bbc0787b11091d4fb74fa610777f5
 # https://github.com/gitalk/gitalk#install
 gitalk:
     owner: tk1990
     repo: blog-comments
-    clientID: 3c2901359c38faa93cb5
-    clientSecret: 95f0d4c4cc4c4580590b4a6152988d0b70e29718
+    clientID: e03260401c274f4211c3
+    clientSecret: 97d5e9414c12bbc0787b11091d4fb74fa610777f5
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : false
 

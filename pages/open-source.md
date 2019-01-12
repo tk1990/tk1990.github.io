@@ -7,7 +7,7 @@ permalink: /open-source/
 ---
 
 {% if site.github.public_repositories != null %}
-{% assign sorted_repos = (site.github.public_repositories | sort: 'stargazers_count') | reverse %}
+{% assign sorted_repos = (site.github.public_repositories  | reverse %}
 
 <section class="container">
     <header class="text-center">
@@ -50,3 +50,4 @@ permalink: /open-source/
     </div>
 </section>
 {% endif %}
+
