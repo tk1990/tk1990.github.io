@@ -2,12 +2,12 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://tk1990.github.io
+url: https://mazhuang.org
 date_format: "ordinal"
 title: 人在码途
-subtitle: "人学习有三种途径，一种是自书本上学前人的知识，一种是自身边的人身上学其先进，一种是向自己过去的经验和教训学习。"
+subtitle: "人在码途"
 description: "佟堃的个人博客"
-keywords: 人在码途，码途，matu，tongkun，佟堃
+keywords: 人在码途,码途,佟堃,tongkun,matu
 timezone: Asia/Shanghai
 encoding: "utf-8"
 side_bar_repo_limit: 5
@@ -15,10 +15,10 @@ side_bar_repo_limit: 5
 # ---------------- #
 #      Author      #
 # ---------------- #
-author: Tongkun
-organization: https://tk1990.github.io
-organization_url: https://tk1990.github.io
-github_username: tongkun
+author: Tong Kun
+organization: tongkun.tech
+organization_url: http://tongkun.tech/
+github_username: tk1990
 location: Beijing, China
 email: tongk1990@126.com
 
@@ -81,7 +81,7 @@ collections:
         output: true
         permalink: /wiki/:path/
 
-repository: tk1990/tk1990.github.io
+repository: mzlogin/mzlogin.github.io
 
 # ---------------- #
 #      Comments    #
@@ -95,14 +95,14 @@ disqus:
     username: 
 # https://imsun.net/posts/gitment-introduction/
 gitment:
-    owner: tongkun
+    owner: mzlogin
     repo: blog-comments
     oauth:
         client_id: d2e1cbbd298958076462
         client_secret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
 # https://github.com/gitalk/gitalk#install
 gitalk:
-    owner: tongkun
+    owner: mzlogin
     repo: blog-comments
     clientID: d2e1cbbd298958076462
     clientSecret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
