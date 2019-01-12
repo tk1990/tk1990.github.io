@@ -1,8 +1,8 @@
 ---
 layout: page
 title: 关于
-description: 打码改变世界
-keywords: Zhuang Ma, 马壮
+description: 人在码途
+keywords: tongkun
 comments: true
 menu: 关于
 permalink: /about/
@@ -16,13 +16,3 @@ permalink: /about/
 * {{ website.sitename }}：[@{{ website.name }}]({{ website.url }})
 {% endfor %}
 
-## Skill Keywords
-
-{% for category in site.data.skills %}
-### {{ category.name }}
-<div class="btn-inline">
-{% for keyword in category.keywords %}
-<button class="btn btn-outline" type="button">{{ keyword }}</button>
-{% endfor %}
-</div>
-{% endfor %}
