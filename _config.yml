@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://mazhuang.org
+url: http://blog.tongkun.tech
 date_format: "ordinal"
 title: 人在码途
 subtitle: "人在码途"
@@ -17,7 +17,7 @@ side_bar_repo_limit: 5
 # ---------------- #
 author: Tong Kun
 organization: tongkun.tech
-organization_url: http://tongkun.tech/
+organization_url: http://blog.tongkun.tech
 github_username: tk1990
 location: Beijing, China
 email: tongk1990@126.com
@@ -34,17 +34,17 @@ navs:
     href: /categories/
     label: 分类
 
-#   -
-#     href: /archives/
-#     label: 归档
-
   -
-    href: /wiki/
-    label: 维基
+    href: /archives/
+    label: 归档
 
-  -
-    href: /links/
-    label: 链接
+  # -
+  #   href: /wiki/
+  #   label: 维基
+
+  # -
+  #   href: /links/
+  #   label: 链接
 
   -
     href: /about/
@@ -81,7 +81,7 @@ collections:
         output: true
         permalink: /wiki/:path/
 
-repository: mzlogin/mzlogin.github.io
+repository: tk1990/tk1990.github.io
 
 # ---------------- #
 #      Comments    #
@@ -95,14 +95,14 @@ disqus:
     username: 
 # https://imsun.net/posts/gitment-introduction/
 gitment:
-    owner: mzlogin
+    owner: tk1990
     repo: blog-comments
     oauth:
         client_id: d2e1cbbd298958076462
         client_secret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
 # https://github.com/gitalk/gitalk#install
 gitalk:
-    owner: mzlogin
+    owner: tk1990
     repo: blog-comments
     clientID: d2e1cbbd298958076462
     clientSecret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
