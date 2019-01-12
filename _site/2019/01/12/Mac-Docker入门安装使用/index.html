@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" prefix="og: http://ogp.me/ns#" class="han-init">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Mac Docker入门安装使用 &mdash; 人在码途</title>
+    <link rel="stylesheet" href="http://blog.tongkun.tech/assets/vendor/primer-css/css/primer.css">
+    <link rel="stylesheet" href="http://blog.tongkun.tech/assets/vendor/primer-markdown/dist/user-content.min.css">
+    <link rel="stylesheet" href="http://blog.tongkun.tech/assets/vendor/octicons/octicons/octicons.css">
+    <link rel="stylesheet" href="http://blog.tongkun.tech/assets/css/components/collection.css">
+    <link rel="stylesheet" href="http://blog.tongkun.tech/assets/css/components/repo-card.css">
+    <link rel="stylesheet" href="http://blog.tongkun.tech/assets/css/sections/repo-list.css">
+    <link rel="stylesheet" href="http://blog.tongkun.tech/assets/css/sections/mini-repo-list.css">
+    <link rel="stylesheet" href="http://blog.tongkun.tech/assets/css/components/boxed-group.css">
+    <link rel="stylesheet" href="http://blog.tongkun.tech/assets/css/globals/common.css">
+    <link rel="stylesheet" href="http://blog.tongkun.tech/assets/vendor/share.js/dist/css/share.min.css">
+    <link rel="stylesheet" href="http://blog.tongkun.tech/assets/css/globals/responsive.css">
+    <link rel="stylesheet" href="http://blog.tongkun.tech/assets/css/posts/index.css">
+    <!-- Latest compiled and minified CSS -->
+    
+
+    
+    <link rel="canonical" href="http://blog.tongkun.tech/2019/01/12/Mac-Docker%E5%85%A5%E9%97%A8%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/">
+    <link rel="alternate" type="application/atom+xml" title="人在码途" href="http://blog.tongkun.tech/feed.xml">
+    <link rel="shortcut icon" href="http://blog.tongkun.tech/favicon.ico">
+    
+    <meta property="og:title" content="Mac Docker入门安装使用">
+      
+    <meta name="keywords" content="Docker">
+    <meta name="og:keywords" content="Docker">
+      
+    <meta name="description" content="最新mac系统千万不要用brew安装，推荐使用官方文档：https://docs.docker.com/docker-for-mac/#proxies">
+    <meta name="og:description" content="最新mac系统千万不要用brew安装，推荐使用官方文档：https://docs.docker.com/docker-for-mac/#proxies">
+      
+    
+    
+        
+    
+    <meta property="og:url" content="http://blog.tongkun.tech/2019/01/12/Mac-Docker%E5%85%A5%E9%97%A8%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/">
+    <meta property="og:site_name" content="人在码途">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN" />
+    
+    <meta property="article:published_time" content="2019-01-12">
+    
+    <script src="http://blog.tongkun.tech/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="http://blog.tongkun.tech/assets/js/jquery-ui.js"></script>
+    <script src="http://blog.tongkun.tech/assets/js/main.js"></script>
+</head>
+<body class="" data-mz="">
+    <header class="site-header">
+        <div class="container">
+            <h1><a href="http://blog.tongkun.tech/" title="人在码途"><span class="octicon octicon-mark-github"></span> 人在码途</a></h1>
+            <button class="collapsed mobile-visible" type="button" onclick="toggleMenu();">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <nav class="site-header-nav" role="navigation">
+                
+                <a href="http://blog.tongkun.tech/" class=" site-header-nav-item" target="" title="首页">首页</a>
+                
+                <a href="http://blog.tongkun.tech/categories/" class=" site-header-nav-item" target="" title="分类">分类</a>
+                
+                <a href="http://blog.tongkun.tech/archives/" class=" site-header-nav-item" target="" title="归档">归档</a>
+                
+                <a href="http://blog.tongkun.tech/about/" class=" site-header-nav-item" target="" title="关于">关于</a>
+                
+            </nav>
+        </div>
+    </header>
+    <!-- / header -->
+
+    <section class="collection-head small geopattern" data-pattern-id="Mac Docker入门安装使">
+<div class="container">
+  <div class="columns">
+    <div class="column three-fourths">
+      <div class="collection-title">
+        <h1 class="collection-header">Mac Docker入门安装使用</h1>
+        <div class="collection-info">
+          
+          <span class="meta-info">
+            <span class="octicon octicon-calendar"></span> 2019/01/12
+          </span>
+          
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="http://blog.tongkun.tech/categories/#Docker" title="Docker">Docker</a>
+          </span>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- / .banner -->
+<section class="container content">
+<div class="columns">
+  <div class="column three-fourths" >
+    <article class="article-content markdown-body">
+    <p>最新mac系统千万不要用brew安装，推荐使用官方文档：https://docs.docker.com/docker-for-mac/#proxies</p>
+
+<h5 id="section">安装镜像：</h5>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>docker pull centos:latest
+</code></pre>
+</div>
+
+<p>latest代表拉取最新的镜像，当然可以先搜索下</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>docker search centos
+</code></pre>
+</div>
+
+<h5 id="section-1">查看本地镜像库：</h5>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker images 
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+centos              latest              1e1148e4cc2c        9 days ago          202MB
+</code></pre>
+</div>
+
+<blockquote>
+  <p>在列出信息中，可以看到几个字段信息:</p>
+
+  <p>来自于哪个仓库，比如 ubuntu
+镜像的标记，比如 16.04
+它的 ID 号(唯一)，比如e4415b714b62
+创建时间
+镜像大小</p>
+</blockquote>
+
+<h5 id="section-2">启动镜像：</h5>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker run -it centos bash 
+<span class="o">[</span>root@fc68ad1849ef /]# 
+</code></pre>
+</div>
+
+<p>-it 表示运行在交互模式，是-i -t的缩写，即-it是两个参数：-i和-t。前者表示打开并保持stdout，后者表示分配一个终端（pseudo-tty）一般这个模式就是可以启动bash，然后和容器有命令行的交互</p>
+
+<p>启动镜像后，分配了一个新终端，命令行变为<code class="highlighter-rouge">[root@fc68ad1849ef /]# </code>说明启动成功，并且登陆到了根目录</p>
+
+<p>在这里可以随意使用Linux命令了，但是有些命令是没有的，需要手动安装，比如vim，可以使用yum安装，命令：</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>yum install vim
+</code></pre>
+</div>
+
+<h5 id="section-3">退出容器</h5>
+
+<p>如果使用exit，命令退出，则容器的状态处于Exit，而不是后台运行。如果想让容器一直运行，而不是停止，可以使用快捷键 ctrl p+q 退出，此时容器的状态为Up</p>
+
+<p>使用exit，然后使用</p>
+
+<p>查看正在运行的容器：docker ps</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker run -it centos bash 
+<span class="o">[</span>root@c06a8694d372 /]# 
+<span class="o">[</span>root@c06a8694d372 /]# <span class="nb">exit
+exit
+</span>tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker ps 
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+bd7181bd39ff        centos              <span class="s2">"bash"</span>              3 minutes ago       Up 3 minutes                            priceless_goldwasser
+</code></pre>
+</div>
+
+<p>可以看到，当前有一个id为bd7181bd39ff的容器，image为centos，就是刚刚启动的，如果通过exit退出容器，这里就不会显示了。</p>
+
+<h5 id="section-4">启动、停止、重启容器</h5>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker stop bd7181bd39ff
+bd7181bd39ff
+tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker ps 
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker start bd7181bd39ff
+bd7181bd39ff
+tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker ps 
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+bd7181bd39ff        centos              <span class="s2">"bash"</span>              6 minutes ago       Up 1 second                             priceless_goldwasser
+tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker restart bd7181bd39ff
+bd7181bd39ff
+tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+bd7181bd39ff        centos              <span class="s2">"bash"</span>              6 minutes ago       Up 4 seconds                            priceless_goldwasser
+</code></pre>
+</div>
+
+<h5 id="attach">进入容器attach</h5>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker attach bd7181bd39ff
+<span class="o">[</span>root@bd7181bd39ff /]# 
+</code></pre>
+</div>
+
+<h5 id="section-5">安装软件、保存环境</h5>
+
+<p>安装vim</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>[root@bd7181bd39ff /]# yum install vim 
+.....
+[root@bd7181bd39ff /]# vi  
+vi        view      vigr      vim       vimdiff   vimtutor  vipw 
+</code></pre>
+</div>
+
+<p>保存容器，先退出容器，然后commit</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker commit -m <span class="s1">'安装vim'</span> -a <span class="s1">'tongkun'</span> bd7181bd39ff tongkun/centos:vim
+sha256:1dab79502fbda22037e865b81882e073575af4e8a0bd8a0de16989b0ed244e2d
+</code></pre>
+</div>
+
+<p>-m指定说明信息；-a指定用户信息；bd7181bd39ff代表容器的id；tongkun/centos:vim指定目标镜像的用户名、仓库名和 tag 信息</p>
+
+<p>查看镜像库，就已经有刚提交的镜像了</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker images 
+REPOSITORY          TAG                 IMAGE ID            CREATED              SIZE
+tongkun/centos      vim                 1dab79502fbd        About a minute ago   327MB
+centos              latest              1e1148e4cc2c        9 days ago           202MB
+</code></pre>
+</div>
+
+<p>退出现有镜像，启动刚刚commit的镜像，查看安装的vim是否存在</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker stop bd7181bd39ff
+bd7181bd39ff
+tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker run -it tongkun/centos bash 
+Unable to find image <span class="s1">'tongkun/centos:latest'</span> locally
+docker: Error response from daemon: Get https://registry-1.docker.io/v2/: Service Unavailable.
+See <span class="s1">'docker run --help'</span>.
+tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker run -it tongkun/centos:vim  bash 
+<span class="o">[</span>root@a7880e04c1d4 /]# vi 
+vi        view      vigr      vim       vimdiff   vimtutor  vipw  
+</code></pre>
+</div>
+
+<p>可以看到，这是我们刚刚commit的镜像，有vim命令工具</p>
+
+<h5 id="section-6">删除容器或镜像</h5>
+
+<p>如果想删除容器或者镜像，可以使用rm命令，注意：删除镜像前必须先删除以此镜像为基础的容器（哪怕是已经停止的容器），否则无法删除该镜像，会报错<strong>Failed to remove image (e4415b714b62): Error response from daemon: conflict: unable to delete e4415b714b62 (cannot be forced) - image has dependent child images</strong>类似这种。</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker ps
+CONTAINER ID        IMAGE                COMMAND             CREATED             STATUS              PORTS               NAMES
+a7880e04c1d4        tongkun/centos:vim   <span class="s2">"bash"</span>              5 minutes ago       Up 5 minutes                            blissful_volhard
+tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker images 
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+tongkun/centos      vim                 1dab79502fbd        10 minutes ago      327MB
+centos              latest              1e1148e4cc2c        9 days ago          202MB
+tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker rmi 1dab79502fbd
+Error response from daemon: conflict: unable to delete 1dab79502fbd <span class="o">(</span>cannot be forced<span class="o">)</span> - image is being used by running container a7880e04c1d4
+</code></pre>
+</div>
+
+<p>删除镜像 <code class="highlighter-rouge">docker rmi 容器id</code>, 因为此镜像有容器在使用，所以不能被删除，需要先删除容器，删除容器命令<code class="highlighter-rouge">docker rm 镜像id</code>，删除之前需要先stop容器，否则也会报错，如下：**Error response from daemon: You cannot remove a running container a7880e04c1d42f6d1f672ac920dd33df552a409cc19029314672643ee18e5836. Stop the container before **</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker rm a7880e04c1d4
+Error response from daemon: You cannot remove a running container a7880e04c1d42f6d1f672ac920dd33df552a409cc19029314672643ee18e5836. Stop the container before attempting removal or force remove
+tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker stop a7880e04c1d4
+a7880e04c1d4
+tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker rm a7880e04c1d4
+a7880e04c1d4
+tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker rmi 1dab79502fbd
+Untagged: tongkun/centos:vim
+Deleted: sha256:1dab79502fbda22037e865b81882e073575af4e8a0bd8a0de16989b0ed244e2d
+Deleted: sha256:f6def596fa2f515b28700f4cd3241e0ea78743abe6dad6d2f65bbf945f6dbf15
+</code></pre>
+</div>
+
+<h4 id="docker-push">Docker push</h4>
+
+<p>正所谓“一次提交，到处使用”，我们可以把配置好的Docker push到仓库中，比如 docker hub</p>
+
+<p>先把刚删除的镜像重新弄回来一遍。。。。。</p>
+
+<p>首先到https://hub.docker.com/注册个账号，然后登陆</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker login 
+Login with your Docker ID to push and pull images from Docker Hub. If you don<span class="s1">'t have a Docker ID, head over to https://hub.docker.com to create one.
+Username: tongkun
+Password: 
+Login Succeeded
+</span></code></pre>
+</div>
+
+<p>push镜像：</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker push tongkun/centos:vim
+The push refers to repository <span class="o">[</span>docker.io/tongkun/centos]
+15f896816a9b: Pushed 
+071d8bd76517: Mounted from library/centos 
+vim: digest: sha256:41bdaf55a709080577ccb40f61c0f91275e4a1cb62827a3893b6a5269a619d67 size: 741
+</code></pre>
+</div>
+
+<p>push成功之后，到docker hub的仓库中，我们就可以看到自己push上去的镜像了，跟github类似，如图：</p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/1272254-e4ef3ca53736d6f0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="屏幕快照 2018-12-16 上午12.35.14" /></p>
+
+<h5 id="pull">pull镜像</h5>
+
+<p>当我们在其他地方也需要使用此镜像是，只需要配置好docker，并登陆docker就可以pull已有的镜像了，为了模拟我们先把本地镜像和容器删掉，从仓库中拉取</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker stop 133b1f45876f
+133b1f45876f
+tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker rm 133b1f45876f
+133b1f45876f
+tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker images 
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+tongkun/centos      vim                 78c5c9cce361        8 minutes ago       327MB
+centos              latest              1e1148e4cc2c        9 days ago          202MB
+<span class="c">#删除镜像</span>
+tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker rmi 78c5c9cce361
+Untagged: tongkun/centos:vim
+Untagged: tongkun/centos@sha256:41bdaf55a709080577ccb40f61c0f91275e4a1cb62827a3893b6a5269a619d67
+Deleted: sha256:78c5c9cce361122999251ef6ed00d286e4a1af70124a53583e46dbaeb3517879
+Deleted: sha256:4b40340dc18b3ef39430f7892e0021af55dcae7f5d76e3b73e0087392f6ca353
+tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker images 
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+centos              latest              1e1148e4cc2c        9 days ago          202MB
+<span class="c">#从仓库中拉取镜像</span>
+tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker pull tongkun/centos:vim 
+vim: Pulling from tongkun/centos
+a02a4930cb5d: Already exists 
+260974091ff8: Pull <span class="nb">complete 
+</span>Digest: sha256:d57b9eb7123569c3b49279e8211d145b1070656be8aede5f97a0d025fc6ec6ee
+Status: Downloaded newer image <span class="k">for </span>tongkun/centos:vim
+tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker images 
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+tongkun/centos      vim                 defbd9f314c9        11 minutes ago      327MB
+centos              latest              1e1148e4cc2c        9 days ago          202MB
+tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker ps 
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+<span class="c">#启动镜像</span>
+tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker run -it tongkun/centos:vim bash 
+<span class="o">[</span>root@c42f9f275474 /]# tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>
+tongkun@localhost java <span class="o">(</span>master<span class="o">)</span> <span class="nv">$ </span>docker ps 
+CONTAINER ID        IMAGE                COMMAND             CREATED             STATUS              PORTS               NAMES
+c42f9f275474        tongkun/centos:vim   <span class="s2">"bash"</span>              11 seconds ago      Up 10 seconds                           frosty_williams
+</code></pre>
+</div>
+
+<h5 id="docker">最后来张docker命令图收尾</h5>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/1272254-8b641689bce503ad.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="20171005132826220" /></p>
+
+<p>Mac入门就到这里了，深层次的使用和控制，后面学习再补充~</p>
+
+<p>参考：http://lihuia.com/2018/03/09/docker/</p>
+
+    </article>
+    <div class="share">
+      <div class="share-component"></div>
+    </div>
+    <div class="comment">
+      
+
+  
+
+  
+        <div id="gitalk-container"></div>
+        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        <script>
+        var gitalk = new Gitalk({
+            id: '/2019/01/12/Mac-Docker%E5%85%A5%E9%97%A8%E5%AE%89%',
+            clientID: 'd2e1cbbd298958076462',
+            clientSecret: 'b42a4178e5fd4a7cf63189ef4b1453b05c375709',
+            repo: 'blog-comments',
+            owner: 'tk1990',
+            admin: ['tk1990'],
+            labels: ['gitment'],
+            perPage: 50,
+        })
+        gitalk.render('gitalk-container')
+        </script>
+  
+
+
+    </div>
+  </div>
+  <div class="column one-fourth">
+    
+<h3>Search</h3>
+<div id="site_search">
+    <input type="text" id="search_box" placeholder="Search">
+</div>
+
+<ul id="search_results"></ul>
+
+<link rel="stylesheet" type="text/css" href="http://blog.tongkun.tech/assets/css/modules/sidebar-search.css">
+<script src="http://blog.tongkun.tech/assets/js/simple-jekyll-search.min.js"></script>
+<script src="http://blog.tongkun.tech/assets/js/search.js"></script>
+
+<script type="text/javascript">
+SimpleJekyllSearch({
+    searchInput: document.getElementById('search_box'),
+    resultsContainer: document.getElementById('search_results'),
+    json: 'http://blog.tongkun.tech/assets/search_data.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    noResultsText: 'No results found',
+    limit: 10,
+    fuzzy: false,
+    exclude: ['Welcome']
+})
+</script>
+
+    
+
+    
+<h3 class="post-directory-title mobile-hidden">Table of Contents</h3>
+<div id="post-directory-module" class="mobile-hidden">
+  <section class="post-directory">
+  <!-- Links that trigger the jumping -->
+  <!-- Added by javascript below -->
+  <dl></dl>
+  </section>
+</div>
+
+<script src="http://blog.tongkun.tech/assets/js/jquery.toc.js"></script>
+
+  </div>
+</div>
+</section>
+<!-- /section.content -->
+
+    <footer class="container">
+        <div class="site-footer" role="contentinfo">
+            <div class="copyright left mobile-block">
+                    © 2015
+                    <span title="Tong Kun">Tong Kun</span>
+                    <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a>
+            </div>
+
+            <ul class="site-footer-links right mobile-hidden">
+                <li>
+                    <a href="javascript:window.scrollTo(0,0)" >TOP</a>
+                </li>
+            </ul>
+            <a href="https://github.com/tk1990/tk1990.github.io" target="_blank" aria-label="view source code">
+                <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+            </a>
+            <ul class="site-footer-links mobile-hidden">
+                
+                <li>
+                    <a href="http://blog.tongkun.tech/" title="首页" target="">首页</a>
+                </li>
+                
+                <li>
+                    <a href="http://blog.tongkun.tech/categories/" title="分类" target="">分类</a>
+                </li>
+                
+                <li>
+                    <a href="http://blog.tongkun.tech/archives/" title="归档" target="">归档</a>
+                </li>
+                
+                <li>
+                    <a href="http://blog.tongkun.tech/about/" title="关于" target="">关于</a>
+                </li>
+                
+                <li><a href="http://blog.tongkun.tech/feed.xml"><span class="octicon octicon-rss" style="color:orange;"></span></a></li>
+            </ul>
+
+        </div>
+    </footer>
+    <div class="tools-wrapper">
+      <a class="gotop" href="#" title="回到顶部"><span class="octicon octicon-arrow-up"></span></a>
+    </div>
+    <!-- / footer -->
+    <script src="http://blog.tongkun.tech/assets/vendor/share.js/dist/js/share.min.js"></script>
+    <script src="http://blog.tongkun.tech/assets/js/geopattern.js"></script>
+    <script src="http://blog.tongkun.tech/assets/js/prism.js"></script>
+    <link rel="stylesheet" href="http://blog.tongkun.tech/assets/css/globals/prism.css">
+    <script>
+      jQuery(document).ready(function($) {
+        // geopattern
+        $('.geopattern').each(function(){
+          $(this).geopattern($(this).data('pattern-id'));
+        });
+       // hljs.initHighlightingOnLoad();
+      });
+    </script>
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div style="display:none">
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-80669434-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    </div>
+    
+</body>
+</html>
