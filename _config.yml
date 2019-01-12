@@ -103,9 +103,9 @@ gitment:
 # https://github.com/gitalk/gitalk#install
 gitalk:
     owner: tk1990
-    repo: blog-comments
-    clientID: e03260401c274f4211c3
-    clientSecret: 97d5e9414c12bbc0787b11091d4fb74fa610777f5
+    repo: https://github.com/tk1990/tk1990.github.io.git
+    clientID: 38ee74e95b41fd97d0e6
+    clientSecret: 04bb86da7f1d32a6d31b9e0c46b1aa0f19a68e98
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : false
 
