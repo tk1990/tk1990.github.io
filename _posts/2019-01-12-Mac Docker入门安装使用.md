@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mac Docker入门安装使用
-categories: Docker
+categories: docker
 description: Mac Docker入门安装使用
 keywords: Docker
 ---
